@@ -1,0 +1,3 @@
+/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/src/test/build/CMakeFiles/rebuild_cache.dir
+/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/src/test/build/CMakeFiles/test.dir
+/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/src/test/build/CMakeFiles/edit_cache.dir
