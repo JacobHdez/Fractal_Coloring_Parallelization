@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/src/test/source/headers/image.h
+rgb.h
+/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/src/test/source/headers/rgb.h
+
+/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/src/test/source/headers/rgb.h
+
+/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/src/test/source/test.cpp
+iostream
+-
+TestConfig.h
+/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/src/test/source/TestConfig.h
+string
+-
+rgb.h
+/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/src/test/source/rgb.h
+image.h
+/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/src/test/source/image.h
+
+TestConfig.h
+
