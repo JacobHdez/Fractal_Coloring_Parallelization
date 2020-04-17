@@ -1,2 +1,0 @@
-/usr/bin/ar qc libheaders.a  CMakeFiles/headers.dir/rgb.cpp.o CMakeFiles/headers.dir/image.cpp.o
-/usr/bin/ranlib libheaders.a

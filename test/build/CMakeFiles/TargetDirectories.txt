@@ -1,6 +1,0 @@
-/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/src/test/build/CMakeFiles/rebuild_cache.dir
-/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/src/test/build/CMakeFiles/Test.dir
-/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/src/test/build/CMakeFiles/edit_cache.dir
-/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/src/test/build/headers/CMakeFiles/rebuild_cache.dir
-/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/src/test/build/headers/CMakeFiles/headers.dir
-/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/src/test/build/headers/CMakeFiles/edit_cache.dir
