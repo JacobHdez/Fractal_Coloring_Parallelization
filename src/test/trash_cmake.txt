@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.16)
+
+# set the project name
+project(test)
+
+# specify the C++ standard
+# set(CMAKE_CXX_STANDARD 11)
+# set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# ...
+# add_library(headers rgb.cpp image.cpp)
+# add_subdirectory(headers)
+
+# ...
+# set(SOURCE_FILES test.cpp)
+
+# add the executable
+# add_executable(test ${SOURCE_FILES})
+# target_link_libraries(test headers)
