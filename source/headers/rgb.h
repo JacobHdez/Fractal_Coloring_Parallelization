@@ -1,6 +1,8 @@
 #ifndef __RGB_H__
 #define __RGB_H__
 
+#include <ostream>
+
 struct RGB
 {
     RGB(void);
@@ -13,6 +15,8 @@ struct RGB
 
     double r, g, b;
 };
+
+std::ostream& operator << (std::ostream &out, const RGB &c);
 
 static const RGB kBlack = RGB(0);
 static const RGB kWhite = RGB(1);

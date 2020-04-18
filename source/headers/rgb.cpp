@@ -1,5 +1,7 @@
 #include "rgb.h"
 
+#include <ostream>
+
 RGB::RGB(void)
     : r(0), g(0), b(0) {}
 RGB::RGB(double c)
@@ -13,3 +15,9 @@ RGB& RGB::operator += (const RGB &rgb)
 { r += rgb.r, g += rgb.g, b += rgb.b; return *this; }
 RGB& RGB::operator *= (const RGB &rgb)
 { r *= rgb.r, g *= rgb.g, b *= rgb.b; return *this; }
+
+std::ostream& operator << (std::ostream &out, const RGB &c)
+{
+    out << c.r << " " << c.g << " " << c.b;
+    return out;
+}
