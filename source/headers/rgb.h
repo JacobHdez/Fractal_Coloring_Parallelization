@@ -4,14 +4,14 @@
 struct RGB
 {
     RGB(void);
-    RGB(float c);
-    RGB(float _r, float _g, float _b);
+    RGB(double c);
+    RGB(double _r, double _g, double _b);
 
     bool operator != (const RGB &c);
     RGB& operator += (const RGB &rgb);
     RGB& operator *= (const RGB &rgb);
 
-    float r, g, b;
+    double r, g, b;
 };
 
 static const RGB kBlack = RGB(0);

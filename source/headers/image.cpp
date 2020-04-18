@@ -66,9 +66,9 @@ void savePPM(const Image &img, const char *filename)
         ofs << "P6\n" << img.w << " " << img.h << "\n255\n";
         unsigned char r, g, b;
         for (int i = 0; i < img.w * img.h; ++i) {
-            r = static_cast<unsigned char>(std::min(1.f, img.pixels[i].r) * 255);
-            g = static_cast<unsigned char>(std::min(1.f, img.pixels[i].g) * 255);
-            b = static_cast<unsigned char>(std::min(1.f, img.pixels[i].b) * 255);
+            r = static_cast<unsigned char>(std::min(1.0, img.pixels[i].r) * 255);
+            g = static_cast<unsigned char>(std::min(1.0, img.pixels[i].g) * 255);
+            b = static_cast<unsigned char>(std::min(1.0, img.pixels[i].b) * 255);
             ofs << r << g << b;
         }
         ofs.close();
