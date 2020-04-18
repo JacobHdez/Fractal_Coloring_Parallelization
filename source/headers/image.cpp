@@ -1,11 +1,11 @@
 #include "image.h"
 #include "rgb.h"
 
-#include <cstdio>
+#include <iostream>
 #include <fstream>
 #include <cstring>
 #include <cassert>
-
+#include <exception>
 
 Image::Image(void)
     : w(0), h(0), pixels(nullptr)
@@ -73,8 +73,8 @@ void savePPM(const Image &img, const char *filename)
         }
         ofs.close();
     }
-    catch (const char *err) {
-        fprintf(stderr, "%s\n", err);
+    catch (std::exception &e) {
+        std::cout << e.what() << "\n";
         ofs.close();
     }
 }
