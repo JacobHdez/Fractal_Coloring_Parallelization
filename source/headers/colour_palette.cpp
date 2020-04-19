@@ -102,8 +102,8 @@ void colour_palette::plot_RGBspace(const char *filename, unsigned partition)
         }
         ofs.close();
     }
-    catch (std::exception &e) {
-        std::cout << e.what() << "\n";
+    catch (const char *err) {
+        std::cout << err << "\n";
         ofs.close();
     }
 }

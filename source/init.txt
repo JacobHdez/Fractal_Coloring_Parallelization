@@ -1,0 +1,16 @@
+./../source/colour_palette.txt
+true
+0
+1024
+true
+./../results/RGB_points.txt
+1000
+./../results/RGB_palette.ppm
+240
+135
+./../results/
+-2.5
+1.0
+-1.0
+1.0
+1024
