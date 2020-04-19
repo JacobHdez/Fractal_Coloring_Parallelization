@@ -1,0 +1,6 @@
+/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/build/CMakeFiles/rebuild_cache.dir
+/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/build/CMakeFiles/FractalColoring.dir
+/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/build/CMakeFiles/edit_cache.dir
+/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/build/headers/CMakeFiles/rebuild_cache.dir
+/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/build/headers/CMakeFiles/headers.dir
+/home/jacobohdez/Documentos/DEMAT/8vo_Semestre/Computo_Paralelo/Proyecto/build/headers/CMakeFiles/edit_cache.dir
