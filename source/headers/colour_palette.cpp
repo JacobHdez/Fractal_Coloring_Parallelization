@@ -2,10 +2,12 @@
 
 #include <iostream>
 #include <fstream>
+#include <cstring>
 #include <vector>
 #include <cassert>
 #include <exception>
 #include "rgb.h"
+#include "image.h"
 
 colour_palette::colour_palette(void)
     : left(0), right(1) {}
@@ -104,4 +106,26 @@ void colour_palette::plot_RGBspace(const char *filename, unsigned partition)
         std::cout << e.what() << "\n";
         ofs.close();
     }
+}
+void colour_palette::plot_palette(const char *filename, unsigned w, unsigned h)
+{
+    assert(w >= 2);
+    assert(h >= 2);
+
+    Image palette(w, h);
+    RGB *buffer = new RGB[w];
+
+    double jump = (right - left) / (w - 1), x;
+    unsigned i;
+    for (i = 0; i < w; ++i) {
+        x = i * jump;
+        buffer[i].r = s_r(x);
+        buffer[i].g = s_g(x);
+        buffer[i].b = s_b(x);
+    }
+
+    for (i = 0; i < h; ++i)
+        memcpy(palette.pixels + i*w, buffer, sizeof(RGB)*w);
+
+    savePPM(palette, filename);
 }
