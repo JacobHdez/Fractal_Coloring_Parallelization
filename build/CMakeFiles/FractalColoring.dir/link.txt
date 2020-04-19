@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/FractalColoring.dir/main.cpp.o  -o FractalColoring  headers/libheaders.a 

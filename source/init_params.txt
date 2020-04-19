@@ -14,3 +14,20 @@ REAL_MAX_VALUE = 1.0
 IMAGINARY_MIN_VALUE = -1.0
 IMAGINARY_MAX_VALUE = 1.0
 MAX_ITERATION = 1024
+
+cout << colour_palette_filename << endl;
+cout << colour_palette_min << endl;
+cout << colour_palette_max << endl;
+cout << cubic_spline << endl;
+cout << RGBspace_filename << endl;
+cout << RGBspace_partition << endl;
+cout << RGBpalette_filename << endl;
+
+cout << img_width << endl;
+cout << img_height << endl;
+cout << img_filename << endl;
+cout << real_min << endl;
+cout << real_max << endl;
+cout << imaginary_min << endl;
+cout << imaginary_max << endl;
+cout << max_iteration << endl;

@@ -73,8 +73,8 @@ void savePPM(const Image &img, const char *filename)
         }
         ofs.close();
     }
-    catch (std::exception &e) {
-        std::cout << e.what() << "\n";
+    catch (const char *err) {
+        std::cout << err << "\n";
         ofs.close();
     }
 }
