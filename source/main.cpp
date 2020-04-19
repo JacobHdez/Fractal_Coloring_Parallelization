@@ -28,11 +28,13 @@ int main(int argc, char const *argv[])
     RGB c;
     c = rgb_colour(0.5);
     cout << c << endl;
+    rgb_colour.plot_RGBspace("./../results/RGB_points_1.txt", 100);
 
-    rgb_colour.set_points("./../source/colour_palette.txt");
+    rgb_colour.set_points("./../source/colour_palette.txt", true);
 
     c = rgb_colour(0.5);
     cout << c << endl;
+    rgb_colour.plot_RGBspace("./../results/RGB_points_2.txt", 100);
 
     return 0;
 }

@@ -15,6 +15,8 @@ struct colour_palette
 
     RGB operator () (double x) const;
 
+    void plot_RGBspace(const char *filename, unsigned partition = 100);
+
     double left, right;
     tk::spline s_r, s_g, s_b;
 };

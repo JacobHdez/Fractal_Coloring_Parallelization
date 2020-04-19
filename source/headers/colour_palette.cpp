@@ -83,3 +83,25 @@ RGB colour_palette::operator () (double x) const
     RGB colour(s_r(x), s_g(x), s_b(x));
     return colour;
 }
+
+void colour_palette::plot_RGBspace(const char *filename, unsigned partition)
+{
+    assert(partition >= 2);
+    std::ofstream ofs(filename);
+    try {
+        if (ofs.fail()) throw("Can't open output file");
+
+        double jump = (right - left) / (partition - 1), x;
+        for (unsigned i = 0; i < partition; ++i) {
+            x = i * jump;
+            ofs << x << " " << s_r(x)
+                     << "  " << s_g(x)
+                     << "  " << s_b(x) << "\n";
+        }
+        ofs.close();
+    }
+    catch (std::exception &e) {
+        std::cout << e.what() << "\n";
+        ofs.close();
+    }
+}
