@@ -77,8 +77,7 @@ int main(int argc, char const *argv[])
     fractal_begin = clock();
 
     for (y = 0; y < img_height; ++y) {
-
-        #pragma omp parallel for ordered schedule(dynamic)
+        #pragma omp parallel for ordered schedule(static)
         for (x = 0;  x < img_width; ++x) {
             zr = zi = 0.0;
             cr = x * range_width + real_min;
@@ -92,25 +91,19 @@ int main(int argc, char const *argv[])
                 iteration++;
             }
 
-            if (iteration == max_iteration) {
-
-                #pragma omp ordered
-                fractal.pixels[y * img_width + x] = kWhite;
-
-            }
-            else {
-
-                #pragma omp ordered
-                fractal.pixels[y * img_width + x] = RGBspace((double)iteration);
-                
+            #pragma omp ordered
+            {
+                if (iteration == max_iteration)
+                    fractal.pixels[y * img_width + x] = kWhite;
+                else
+                    fractal.pixels[y * img_width + x] = RGBspace((double)iteration);
             }
         }
-
     }
 
     fractal_end = clock();
 
-    savePPM(fractal, img_filename.c_str());
+    // savePPM(fractal, img_filename.c_str());
     global_end = clock();
 
     fractal_secs = (fractal_end - fractal_begin) / (double)CLOCKS_PER_SEC;

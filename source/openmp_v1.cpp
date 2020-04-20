@@ -103,7 +103,7 @@ int main(int argc, char const *argv[])
 
     fractal_end = clock();
 
-    savePPM(fractal, img_filename.c_str());
+    // savePPM(fractal, img_filename.c_str());
     global_end = clock();
 
     fractal_secs = (fractal_end - fractal_begin) / (double)CLOCKS_PER_SEC;

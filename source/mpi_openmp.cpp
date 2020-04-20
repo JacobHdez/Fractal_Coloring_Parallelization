@@ -179,7 +179,7 @@ double master(unsigned world_size)
 
     fractal_end = clock();
 
-    savePPM(fractal, img_filename.c_str());
+    // savePPM(fractal, img_filename.c_str());
     return (fractal_end - fractal_begin) / (double)CLOCKS_PER_SEC;
 }
 void worker(void)
@@ -216,7 +216,7 @@ void worker(void)
         if (stat.MPI_TAG == TAG_JOB_DATA) {
             MPI_Recv(&y, 1, MPI_UNSIGNED, 0, TAG_JOB_DATA, MPI_COMM_WORLD, &stat2);
 
-            #pragma omp parallel for ordered schedule(dynamic)
+            #pragma omp parallel for ordered schedule(static)
             for (x = 0; x < img_width; ++x) {
                 zr = zi = 0.0;
                 cr = x * range_width + real_min;
@@ -230,17 +230,12 @@ void worker(void)
                     iteration++;
                 }
 
-                if (iteration == max_iteration) {
-
-                    #pragma omp ordered
-                    buffer[x] = kWhite;
-
-                }
-                else {
-
-                    #pragma omp ordered
-                    buffer[x] = RGBspace((double)iteration);
-                    
+                #pragma omp ordered
+                {
+                    if (iteration == max_iteration)
+                        buffer[x] = kWhite;
+                    else
+                        buffer[x] = RGBspace((double)iteration);
                 }
             }
 
